@@ -1,0 +1,10 @@
+.container{
+    height:700px;
+    width:1280px;
+    border: 1px solid black;
+}
+.buttons{
+    float:right;
+    padding:20px;
+    
+}

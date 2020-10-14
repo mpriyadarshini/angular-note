@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'notes';
+  
+  notes = []
+  date;
+  content;
+  title;
+
+  onsave(){
+    this.notes.push(this.date,this.title,this.content);
+  }
 }

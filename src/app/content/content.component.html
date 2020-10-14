@@ -1,0 +1,11 @@
+Date:
+<input type="date" name="date" class="date" id="date" [(ngModel)]="date" />
+Title: <input type="text" name="title" class="title" [(ngModel)]="title"/>
+<div class="container">
+  <textarea rows="30" cols="175" name="content" [(ngModel)]="content"> </textarea>
+  <div class="buttons">
+    <button type="submit" (click)="addNotes(date,title,content)">Save</button>
+  </div>
+</div>
+
+
