@@ -12,20 +12,19 @@ export class ContentComponent implements OnInit {
   content;
   
 
-  @Output() notes: EventEmitter<string[]> = new EventEmitter<string[]>();
+  @Output() save: EventEmitter<{date:Date,title:string,content:string}> = new EventEmitter<{date:Date,title:string,content:string}>();
 
   constructor() { }
 
   ngOnInit(): void {
-    this.notes.emit([this.date,this.title,this.content]);
+    
   }
-  addNotes(date,title,content){
-    //this.notes.push(date,title,content);
-    console.log(this.notes);
+
+  addNotes(event){
+    this.save.emit({date:this.date,title:this.title,content:this.title});
     this.date = ''
     this.title = ''
     this.content = ''
-
   }
 
 }

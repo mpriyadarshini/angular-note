@@ -7,8 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  //items=['megha','divya','richard']
-  @Input()  notes : string[]
+  
+  @Input()  notes 
 
   constructor() { }
 

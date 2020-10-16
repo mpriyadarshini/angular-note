@@ -2,7 +2,7 @@
 <p class="header">Note App</p>
 </div>
 <div class="row">
-  <app-sidebar class="left" (notes)="onsave()"></app-sidebar>
+  <app-sidebar class="left" [notes]="notes"></app-sidebar>
 
-  <app-content class="right" (notes)="notes"></app-content>
+  <app-content class="right" (save)="onsave($event)"></app-content>
 </div>

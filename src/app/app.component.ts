@@ -8,11 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   
   notes = []
-  date;
-  content;
-  title;
 
-  onsave(){
-    this.notes.push(this.date,this.title,this.content);
+  onsave(note){
+    this.notes.push(note);
   }
 }
