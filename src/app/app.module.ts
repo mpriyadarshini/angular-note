@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

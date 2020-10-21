@@ -1,7 +1,8 @@
 <div class="container">
-  <div *ngFor="let item of notes">
-    <p>{{ item.title }}</p>
+  <div *ngFor="let item of notes" >
+    <a (click)="onclick(item)">{{ item.content }}</a>
   </div>
+  <button (click)="onAdd()"> Add a new note</button>
 </div>
 
 

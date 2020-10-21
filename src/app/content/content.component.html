@@ -1,11 +1,8 @@
-Date:
-<input type="date" name="date" class="date" id="date" [(ngModel)]="date" />
-Title: <input type="text" name="title" class="title" [(ngModel)]="title"/>
+
 <div class="container">
-  <textarea rows="30" cols="175" name="content" [(ngModel)]="content"> </textarea>
+  <textarea rows="30" cols="175" name="content" [(ngModel)]="note.content">
+  </textarea>
   <div class="buttons">
-    <button type="submit" (click)="addNotes($event)">Save</button>
+    <button type="submit" (click)="addNotes()">Save</button>
   </div>
 </div>
-
-

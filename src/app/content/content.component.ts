@@ -1,30 +1,21 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Note } from '../models/note';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  styleUrls: ['./content.component.css'],
 })
 export class ContentComponent implements OnInit {
+  //@Output() save = new EventEmitter<Note>();
 
-  date;
-  title;
-  content;
-  
+  @Input() note: Note;
 
-  @Output() save: EventEmitter<{date:Date,title:string,content:string}> = new EventEmitter<{date:Date,title:string,content:string}>();
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-    
+  addNotes() {
+    //this.save.emit(this.note);
   }
-
-  addNotes(event){
-    this.save.emit({date:this.date,title:this.title,content:this.title});
-    this.date = ''
-    this.title = ''
-    this.content = ''
-  }
-
 }

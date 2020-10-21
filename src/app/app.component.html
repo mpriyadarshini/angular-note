@@ -1,8 +1,16 @@
 <div class="container">
-<p class="header">Note App</p>
+  <p class="header">Note App</p>
 </div>
 <div class="row">
-  <app-sidebar class="left" [notes]="notes"></app-sidebar>
+  <app-sidebar
+    class="left"
+    [notes]="notes"
+    (select)="onselect($event)"
+    (add)="onAdd()"
+  ></app-sidebar>
 
-  <app-content class="right" (save)="onsave($event)"></app-content>
+  <app-content
+    class="right"
+    [note]="selectedNote"
+  ></app-content>
 </div>
